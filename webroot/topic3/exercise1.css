@@ -1,0 +1,23 @@
+div { <!--div elements-->
+ background-color: silver;
+}
+
+strong { <!--strong elements-->
+    font-size: 24pt;
+}
+
+p, ul { <!--p & ul elements-->
+    background-color: green;
+}
+
+#cool, .shiny { <!--elements having cool for their id attributes & elements belonging to the shiny class-->
+    background-color: silver;
+}
+
+a.hover {
+    background-color: pink;
+}
+
+ul a {
+    color: orange
+}
