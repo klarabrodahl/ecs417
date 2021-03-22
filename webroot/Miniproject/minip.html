@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="reset" href="reset.css">
+        <link rel="stylesheet" href="minip.css">
+        <meta charset="utf-8">
+        <title>Miniproject</title>
+
+
+    </head>
+    <body> 
+
+        <header>
+
+            
+            <div class="topnav">
+                <img src="logokb.png" alt="KB logo" width="50" height="50"/> &nbsp; &nbsp;
+                <a href="#aboutme">About Myself </a> &nbsp; &nbsp;
+                <a href="#experience">Experience </a> &nbsp; &nbsp;
+                <a href="#skills">Skills </a> &nbsp; &nbsp;
+                <a href="#education">Education</a> &nbsp; &nbsp;
+                <a href="#blog">Blog</a> 
+
+                 
+                 <button id="myBtn">Login</button>
+
+                 <div id="myModal" class="modal">
+ 
+                 <div class="modal-content">
+                 <span class="close">&times;</span>
+                    <form action="/action_page.php">
+                     <label for="email">Email</label><br>
+                     <input type="text" id="uname" name="uname" required><br>
+                     <label for="pword">Password</label><br>
+                     <input type="text" id="pword" name="pword" required><br><br>
+                     <input type="submit" value="Login">
+                    </form>
+                </div>
+
+                </div>
+                    
+                    <script> //Javascript for project
+
+                    // Gets the login modal
+                    var modal = document.getElementById("myModal");
+                
+                    // Get button to open modal
+                    var btn = document.getElementById("myBtn");
+                
+                    // Get element that close modal
+                    var span = document.getElementsByClassName("close")[0];
+                
+                    // The modal will open when button gets clicked
+                    btn.onclick = function() {
+                        modal.style.display = "block";
+                    }
+                
+                    // The modal closes when the the span element gets clicked on
+                    span.onclick = function() {
+                        modal.style.display = "none";
+                    }
+                
+                    // Clicking outside modal will close it as well
+                    window.onclick = function(event) {
+                        if (event.target == modal) {
+                            modal.style.display = "none";
+                        }
+                    }
+                
+                    </script>
+
+                </div>
+
+    
+            
+            <center>
+            <hgroup> 
+                <img src="logokb.png" alt="KB logo" width="200" height="200" />
+                <h1 class="welcome"> Welcome to my portfolio </h1>
+            </hgroup>
+
+            <div class="contacthyperlinks">
+            <a href="https://www.instagram.com/klarabrodahl/">
+                <img alt="Instagram hyperlink" src="iconfinder_social_media_applications_3-instagram_4102579.png"
+                width="50" height="50">
+             </a>
+
+             <a href="https://www.linkedin.com/in/klara-brodahl-491995150/?originalSubdomain=se">
+                <img alt="Linkedin hyperlink" src="iconfinder_1_Linkedin_unofficial_colored_svg_5296501-2.png"
+                width="50" height="50">
+             </a>
+
+             <a href="wa.link/wz3dal">
+                <img alt="Whatsapp hyperlink" src="iconfinder_1_Whatsapp2_colored_svg_5296520.png"
+                width="50" height="50">
+             </a>
+
+             <a href="https://www.facebook.com/klara.brodahlsvensson">
+                <img alt="Facebook hyperlink" src="iconfinder_83-facebook_4202110.png"
+                width="50" height="50">
+             </a>¨
+            </div>
+            </center>
+            
+        </header>
+
+         
+       
+        
+        <article> 
+            <section id="aboutme">
+                <img src="Skärmavbild 2021-01-26 kl. 15.44.09.png" alt="profilpicture" width="230" height="300"/> 
+                <h1>About me</h1>
+                <p>
+                Coming soon.
+                </p>
+            </section>
+
+            <section id="experience">
+                <h1>Experience</h1>
+                <p>
+                Coming soon.
+                </p>
+            </section>
+
+            <section id="skills">
+                <h1>Skills</h1>
+                <p>
+                Coming soon.
+                </p>
+            </section>
+            <section id="education">
+                <h1>Education</h1>
+                <p>
+                Coming soon.
+                </p>
+            </section>
+
+        </article>
+       
+        <footer>
+        <p><i>Copyright © 2021 Klara Svensson Brodahl</i></p>
+        </footer>
+
+    </body>
+
+</html>
