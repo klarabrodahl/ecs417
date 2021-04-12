@@ -46,7 +46,7 @@ if ($conn->connect_error) {
                  <div class="modal-content">
                  <span class="close">&times;</span>
                  <form action = "addpost.php" method = "post">
-                     <label for="email">email</label><br>
+                     <label for="email">Email</label><br>
                      <input type="text" id="email" name="email" required><br>
                      <label for="pword">Password</label><br>
                      <input type="password" id="pword" name="password" required><br><br>
@@ -195,10 +195,10 @@ if ($conn->connect_error) {
                 <h1>EDUCATION</h1>
     
                     <div class="item">
-                    <b>Tjejer Kodar <i> Girls that code</i>, Sweden (2019) </b>
+                    <b>Tjejer Kodar <i> "Girls that code" </i>, Sweden (2019) </b>
                     <br>
                     <br>
-                    One weeks online course on HTML & CSS.
+                    One week online course on HTML & CSS.
                     </div>
 
                     <div class="item">
