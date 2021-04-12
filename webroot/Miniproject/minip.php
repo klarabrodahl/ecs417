@@ -45,7 +45,7 @@ if ($conn->connect_error) {
  
                  <div class="modal-content">
                  <span class="close">&times;</span>
-                 <form action = "login.php" method = "post">
+                 <form action = "addpost.php" method = "post">
                      <label for="email">email</label><br>
                      <input type="text" id="email" name="email" required><br>
                      <label for="pword">Password</label><br>
@@ -75,7 +75,7 @@ if ($conn->connect_error) {
                     }
                 }
                 if(isset($_SESSION["email"])){
-                    header("Location:login.php");
+                    header("Location:addpost.php");
                 }
 
                 ?>
