@@ -46,12 +46,11 @@ if ($conn->connect_error) {
                  <div class="modal-content">
                  <span class="close">&times;</span>
                  <form action = "minip.php" method = "post">
-                 <div class="message"> <?php if($message!="") { echo $message; } ?></div>
                      <label for="username">Username</label><br>
-                     <input type="text" class = "field" id="uname" name="username" required><br>
+                     <input type="text" id="uname" name="username" required><br>
                      <label for="pword">Password</label><br>
-                     <input type="password" class = "field" id="pword" name="password" required><br><br>
-                     <input type="submit" class = "field" name = "login" value="Login">
+                     <input type="password" id="pword" name="password" required><br><br>
+                     <input type="submit" name = "login" value="Login">
                     </form>
                 </div>
 
