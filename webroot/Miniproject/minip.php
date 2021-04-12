@@ -45,8 +45,8 @@ if ($conn->connect_error) {
  
                  <div class="modal-content">
                  <span class="close">&times;</span>
-                 <form action = "addpost.php" method = "post">
-                     <label for="email">Email</label><br>
+                 <form action = "minip.php" method = "post">
+                     <label for="email">email</label><br>
                      <input type="text" id="email" name="email" required><br>
                      <label for="pword">Password</label><br>
                      <input type="password" id="pword" name="password" required><br><br>
@@ -56,7 +56,7 @@ if ($conn->connect_error) {
 
                 <?php
 
-                if (isset($POST['login'])){
+                if (isset($_POST['login'])){
                     $email = $_POST['email'];
                     $Password = $_POST['password'];
 
@@ -75,7 +75,7 @@ if ($conn->connect_error) {
                     }
                 }
                 if(isset($_SESSION["email"])){
-                    header("Location:minip.php");
+                    header("Location:addpost.php");
                 }
 
                 ?>
@@ -195,10 +195,10 @@ if ($conn->connect_error) {
                 <h1>EDUCATION</h1>
     
                     <div class="item">
-                    <b>Tjejer Kodar <i> "Girls that code" </i>, Sweden (2019) </b>
+                    <b>Tjejer Kodar <i> Girls that code</i>, Sweden (2019) </b>
                     <br>
                     <br>
-                    One week online course on HTML & CSS.
+                    One weeks online course on HTML & CSS.
                     </div>
 
                     <div class="item">
