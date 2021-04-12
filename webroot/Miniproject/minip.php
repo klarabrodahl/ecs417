@@ -60,7 +60,7 @@ if ($conn->connect_error) {
                     $Username = $_POST['username'];
                     $Password = $_POST['password'];
 
-                    $select = mysqli_query($conn, "SELECT * FROM tb_student WHERE username = '$Username' AND password = '$Password'");
+                    $select = mysqli_query($conn, "SELECT * FROM USER WHERE email = '$Username' AND password = '$Password'");
                     $row = mysqli_fetch_array($select);
 
                     if (is_array($row)){
