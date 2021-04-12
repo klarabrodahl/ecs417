@@ -46,8 +46,8 @@ if ($conn->connect_error) {
                  <div class="modal-content">
                  <span class="close">&times;</span>
                  <form action = "minip.php" method = "post">
-                     <label for="username">Username</label><br>
-                     <input type="text" id="uname" name="username" required><br>
+                     <label for="email">email</label><br>
+                     <input type="text" id="email" name="email" required><br>
                      <label for="pword">Password</label><br>
                      <input type="password" id="pword" name="password" required><br><br>
                      <input type="submit" name = "login" value="Login">
@@ -57,24 +57,24 @@ if ($conn->connect_error) {
                 <?php
 
                 if (isset($POST['login'])){
-                    $Username = $_POST['username'];
+                    $email = $_POST['email'];
                     $Password = $_POST['password'];
 
-                    $select = mysqli_query($conn, "SELECT * FROM USER WHERE email = '$Username' AND password = '$Password'");
+                    $select = mysqli_query($conn, "SELECT * FROM USER WHERE email = '$Email' AND password = '$Password'");
                     $row = mysqli_fetch_array($select);
 
                     if (is_array($row)){
-                        $_SESSION["username"] = $row ['username'];
+                        $_SESSION["email"] = $row ['email'];
                         $_SESSION["password"] = $row ['password'];
                     }
                     else {
                         echo '<script type = "text/javascript">';
-                        echo 'alert("Invalid Username or Password")';
+                        echo 'alert("Invalid Email or Password")';
                         echo 'window.location.href = "minip.php"';
                         echo '<script>';
                     }
                 }
-                if(isset($_SESSION["username"])){
+                if(isset($_SESSION["email"])){
                     header("Location:login.php");
                 }
 
