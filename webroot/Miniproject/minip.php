@@ -45,7 +45,7 @@ if ($conn->connect_error) {
  
                  <div class="modal-content">
                  <span class="close">&times;</span>
-                 <form action = "minip.php" method = "post">
+                 <form action = "login.php" method = "post">
                      <label for="email">email</label><br>
                      <input type="text" id="email" name="email" required><br>
                      <label for="pword">Password</label><br>
@@ -60,7 +60,7 @@ if ($conn->connect_error) {
                     $email = $_POST['email'];
                     $Password = $_POST['password'];
 
-                    $select = mysqli_query($conn, "SELECT * FROM USER WHERE email = '$Email' AND password = '$Password'");
+                    $select = mysqli_query($conn, "SELECT * FROM USER WHERE email = '$email' AND password = '$Password'");
                     $row = mysqli_fetch_array($select);
 
                     if (is_array($row)){
