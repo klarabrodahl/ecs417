@@ -75,7 +75,7 @@ if ($conn->connect_error) {
                     }
                 }
                 if(isset($_SESSION["email"])){
-                    header("Location:addpost.php");
+                    header("Location:minip.php");
                 }
 
                 ?>
