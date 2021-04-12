@@ -1,7 +1,6 @@
 <DOCTYPE html>
 
 <?php
-session.start();
 
 $dbhost = getenv("MYSQL_SERVICE_HOST");
 $dbport = getenv("MYSQL_SERVICE_PORT");
