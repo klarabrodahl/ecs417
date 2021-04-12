@@ -68,10 +68,9 @@ if ($conn->connect_error) {
                         $_SESSION["password"] = $row ['password'];
                     }
                     else {
-                        echo '<script type = "text/javascript">';
+                     
                         echo 'alert("Invalid Email or Password")';
-                        echo 'window.location.href = "minip.php"';
-                        echo '<script>';
+                     
                     }
                 }
                 if(isset($_SESSION["email"])){
