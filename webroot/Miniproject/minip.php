@@ -1,17 +1,18 @@
 <DOCTYPE html>
 
 <?php
+session.start();
 
-$message="";
-if(count($_POST)>0) {
-	$conn = mysqli_connect("localhost","root","","phppot_examples");
-	$result = mysqli_query($conn,"SELECT * FROM USERS WHERE user_name='" . $_POST["username"] . "' and password = '". $_POST["password"]."'");
-	$count  = mysqli_num_rows($result);
-	if($count==0) {
-		$message = "Invalid Username or Password!";
-	} else {
-		$message = header("Location: http://www.google.com/");
-	}
+$dbhost = getenv("MYSQL_SERVICE_HOST");
+$dbport = getenv("MYSQL_SERVICE_PORT");
+$dbuser = getenv("DATABASE_USER");
+$dbpwd = getenv("DATABASE_PASSWORD");
+$dbname = getenv("DATABASE_NAME");
+$conn = new mysqli($dbhost, $dbuser, $dbpwd, $dbname);
+// Checks connection
+
+if ($conn->connect_error) {
+ die("Connection failed: " . $conn->connect_error);
 }
 ?>
 
@@ -45,15 +46,41 @@ if(count($_POST)>0) {
  
                  <div class="modal-content">
                  <span class="close">&times;</span>
-                 <form name="frmUser" method="post" action="">
+                 <form action = "minip.php" method = "post">
                  <div class="message"> <?php if($message!="") { echo $message; } ?></div>
                      <label for="username">Username</label><br>
-                     <input type="text" id="uname" name="username" required><br>
+                     <input type="text" class = "field" id="uname" name="username" required><br>
                      <label for="pword">Password</label><br>
-                     <input type="password" id="pword" name="password" required><br><br>
-                     <input type="submit" value="Login">
+                     <input type="password" class = "field" id="pword" name="password" required><br><br>
+                     <input type="submit" class = "field" name = "login" value="Login">
                     </form>
                 </div>
+
+                <?php
+
+                if (isset($POST['login'])){
+                    $Username = $_POST['username'];
+                    $Password = $_POST['password'];
+
+                    $select = mysqli_query($conn, "SELECT * FROM tb_student WHERE username = '$Username' AND password = '$Password'");
+                    $row = mysqli_fetch_array($select);
+
+                    if (is_array($row)){
+                        $_SESSION["username"] = $row ['username'];
+                        $_SESSION["password"] = $row ['password'];
+                    }
+                    else {
+                        echo '<script type = "text/javascript">';
+                        echo 'alert("Invalid Username or Password")';
+                        echo 'window.location.href = "minip.php"';
+                        echo '<script>';
+                    }
+                }
+                if(isset($_SESSION["username"])){
+                    header("Location:login.php");
+                }
+
+                ?>
 
                 </div>
                     
