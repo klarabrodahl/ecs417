@@ -69,7 +69,8 @@ if ($conn->connect_error) {
                     }
                     else {
                      
-                        echo 'alert("Invalid Email or Password")';
+                        $message = "Username and/or Password incorrect.\\nTry again.";
+  						echo "<script type='text/javascript'>alert('$message');</script>";
                      
                     }
                 }
@@ -151,10 +152,10 @@ if ($conn->connect_error) {
         
         <article> 
             <section id="aboutme">
-				<figure>
-                <img src="profilepic.png" alt="profilpicture" width="200" height="250"/> 
-				<figcaption>Picture of me.</figcaption>
-				</figure>
+			
+                <img src="profilepic.png" alt="profilpicture" width="230" height="300"/> 
+				
+				
                 <h1>ABOUT ME</h1>
                 <p>
                     <b> Computer Science undergraduate student at Queen Mary University of London.</b>
