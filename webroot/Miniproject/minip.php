@@ -69,7 +69,7 @@ if ($conn->connect_error) {
                     }
                     else {
                      
-                        $message = "Username and/or Password incorrect.\\nTry again.";
+                        $message = "Email and/or Password incorrect.\\nTry again.";
   						echo "<script type='text/javascript'>alert('$message');</script>";
                      
                     }
