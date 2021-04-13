@@ -46,7 +46,7 @@ if ($conn->connect_error) {
                  <div class="modal-content">
                  <span class="close">&times;</span>
                  <form action = "minip.php" method = "post">
-                     <label for="email">email</label><br>
+                     <label for="email">Email</label><br>
                      <input type="text" id="email" name="email" required><br>
                      <label for="pword">Password</label><br>
                      <input type="password" id="pword" name="password" required><br><br>
