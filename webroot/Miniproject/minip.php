@@ -151,7 +151,10 @@ if ($conn->connect_error) {
         
         <article> 
             <section id="aboutme">
+				<figure>
                 <img src="profilepic.png" alt="profilpicture" width="230" height="300"/> 
+				<figcaption>Picture of me.</figcaption>
+				</figure>
                 <h1>ABOUT ME</h1>
                 <p>
                     <b> Computer Science undergraduate student at Queen Mary University of London.</b>
