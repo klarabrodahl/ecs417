@@ -157,7 +157,7 @@ if ($conn->connect_error) {
                     <b> Computer Science undergraduate student at Queen Mary University of London.</b>
                     <br>
                     <br>
-                My professional aim is to become a successful computer Software engineer. I also find web design very interesting and would love to freelance with that also in the future. My first step to achive my professional goals is to complete my bachelor's degree in Computer Science at Queen Mary University of London. Furthermore, I intend to develop my knowledge in the field with a master's degree. Other than this I am in general a positive, social girl who sees opportunities instead of problems. My problem-solving skills do I also find relative for a job in the IT industry.
+                My professional aim is to become a successful computer Software engineer. I also find web design very interesting and would love to freelance with that also in the future. My first step to achive my professional goals is to complete my bachelor's degree in Computer Science at Queen Mary University of London. Furthermore, I intend to develop my knowledge in the field with a master's degree. Other than this I am in general a positive, social girl who sees opportunities instead of problems. These problem-solving skills of mine do I also find meritorious for a job in the IT industry.
                 </p>
             </section>
 
